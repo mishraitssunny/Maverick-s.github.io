@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Food Delivery System</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!---custom css file link--->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <div class="loading-overlay">
+        <!-- White background -->
+        <div class="loading-overlay-background"></div>
+        <!-- Loading logo -->
+        <div class="loading-logo">
+            <img src="Image/loading5.gif" alt="Loading">
+        </div>
+    </div>
+<!---header section starts-->
+<header class="header">
+    <a href="#" class="logo"> <i class="fa-solid fa-burger"></i>   Mavericks </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">features</a>
+        <a href="#products">products</a>
+        <a href="#menu">menu</a>
+        <a href="#review">review</a>
+        <a href="#blogs">blogs</a>
+
+    </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn" ></div>
+        <div class="fas fa-search" id="search-btn" ></div>
+        <div class="fas fa-shopping-cart" id="crt-btn" ></div>
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here.....">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+    
+
+    <!-- Shooping Cart -->
+
+    <div class="shopping-cart">
+        <div class="total">Total: ₹6656/-</div>
+        <a href="#" class="btn" id="checkout-btn">Order Now</a>
+    </div>
+
+    
+
+    
+
+    <!-- Login Form -->
+
+    <form action="" class="login-form" id="login-form">
+        <h3>Your Address</h3>
+        <input type="email" id="email" placeholder="Enter your email" class="box" required>
+        <input type="text" id="yourName" placeholder="Your Name" class="box" required>
+        <input type="tel" id="phone" placeholder="Phone Number" class="box" required maxlength="10" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+        <input type="tel" id="housenumber" placeholder="House Number" class="box" required minlength="5" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+        <input type="text" id="city" placeholder="City" class="box" required>
+        <input type="text" id="landmark" placeholder="Landmark" class="box" required>
+        <input type="tel" id="pincode" placeholder="Pin Code" class="box" required maxlength="6" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+        
+        <input type="submit" value="Place Your Order" class="btn"onclick="submitToWeb3Forms(event)">
+    </form>
+    
+    
+
+</header>
+<!---header section edn-->
+
+<!-- home section start -->
+<section class="home" id="home">
+    <div class="content">
+        <h3>Are <span> You </span> Hungry </h3>
+        <h3>Don't <span>Wait </span>  </h3>
+        <a href="#" class="btn" onclick="scrollToMenu()">Order Now</a>
+    </div>
+</section>
+
+
+<!-- home section end  -->
+
+<!-- Features section starts -->
+
+<section class="features" id="features">
+    <h1 class="heading">our <span>features</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="Image/F.jpg" alt="">
+                <h3>fresh and organic</h3>
+                <a href="#" class="btn">read more</a>
+            </div>
+    
+            <div class="box">
+                <img src="Image/Boy2.jpg" alt="">
+                <h3>free delivery</h3>
+                <a href="#" class="btn">read more</a>
+            </div>
+    
+            <div class="box">
+                <img src="Image/P2.jpg" alt="">
+                <h3>Pay on delivery</h3>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Features section ends -->
+
+<!-- Product section start -->
+
+<section class="products" id="products">
+    <h1 class="heading">our <span>products</span></h1>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="Image/pi.png" alt="">
+                <h3>Pizza</h3>
+                <span class="price">₹220/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/bg.png" alt="">
+                <h3>Burger</h3>
+                <span class="price">₹80/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/cc.png" alt="">
+                <h3>Caco-Cola</h3>
+                <span class="price">₹30/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/kb.png" alt="">
+                <h3>Shahi Paneer</h3>
+                <span class="price">₹180/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="Image/tr2.png" alt="">
+                <h3>Tanduri Roti</h3>
+                <span class="price">₹10/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/st2.png" alt="">
+                <h3>Special Thali</h3>
+                <span class="price">₹250/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/ds.png" alt="">
+                <h3>Dosha</h3>
+                <span class="price">₹120/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/Pv2.png" alt="">
+                <h3>Pav Bhaji</h3>
+                <span class="price">₹120/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+        </div>
+
+    </div>
+
+    
+
+</section>
+
+<!-- Product section end -->
+
+<!-- Menu section start  -->
+
+<section class="menu" id="menu">
+    <h1 class="heading">Our  <span>Menu</span></h1>
+
+    <div class="box-container">
+
+
+    <div class="box">
+            <img src="Image/start..png" alt="">
+            <h3>Pizzas</h3>
+            <p>upto 40% off</p>
+            <a href="star.html" class="btn">View more</a>
+    </div>
+
+    <div class="box">
+        <img src="Image/ob.png" alt="">
+        <h3>BREAK FAST</h3>
+        <p>upto 40% off</p>
+        <a href="pizza.html" class="btn">View more</a>
+    </div>
+
+    <div class="box">
+        <img src="Image/hb2.png" alt="">
+        <h3>Hot Beverages</h3>
+        <p>upto 40% off</p>
+        <a href="hot.html" class="btn">View more</a>
+    </div>
+
+    <div class="box">
+        <img src="Image/cb.png" alt="">
+        <h3>Cold Beverages</h3>
+        <p>upto 40% off</p>
+        <a href="cold.html" class="btn">View more</a>
+    </div>
+
+
+</div>
+
+<!-- Full screen overlay -->
+<div id="overlay">
+    <div id="overlay-content">
+        <h2>Your order was placed successfully!</h2>
+    </div>
+</div>
+
+
+
+</section>
+
+<!-- Menu section ends  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<!--custom js file link----->
+<script src="JS/script.js"></script>
+
+
+
+    
+</body>
+</html>

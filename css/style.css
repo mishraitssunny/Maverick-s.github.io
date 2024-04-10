@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+   --orange: #ff7800;
+   --black: #130f40;
+   --light-color: #666;
+   --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+   --border: .2rem solid rgba(0,0,0,.1);
+   --outline: .1rem solid rgba(0,0,0,.1);
+   --outline-hover:.2rem solid var(var(--black))
+
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+body{
+    background:#eee;
+
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+
+
+}
+
+.heading span{
+    background: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%,0% 100%,7% 50%,0% 0%);
+
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+
+}
+/* Add this CSS to style the "Your Cart is Empty" message */
+.shopping-cart p {
+    font-size: 1.6rem;
+    color: var(--black);
+    text-align: center;
+    padding: 2rem;
+}
+
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+.header .logo i{
+    color: var(--orange);
+}
+.header .navbar a{
+
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color:var(--black);
+    
+}
+.header .navbar a:hover{
+    color:var(--orange);
+
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-origin: .5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: var(--orange);
+    color: #eee;
+}
+
+.btn:hover{
+    background:var(--orange);
+    color: #fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top:110%; right:-110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+
+}
+
+.header .search-form.active{
+    right: 3rem;
+    width: 500px;
+    transition: .4s linear;
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding:0 1.5rem;
+}
+.header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .search-form label:hover{
+    color: var(--orange);
+}
+
+.header .shopping-cart{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    background: #fff;
+    max-height: 60vh; /* Maximum height for the shopping cart */
+    overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+    border: 0.2rem solid var(--black); /* Add border */
+}
+
+.header .shopping-cart.active{
+
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin:1rem 0;
+}
+.header .shopping-cart .box img{
+    height:10rem;
+
+}
+
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right:2rem;
+    cursor: pointer;
+    color: var(--light-color);
+    transform: translateY(-50%);
+
+}
+.shopping-cart {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    background: #fff;
+    max-height: 60vh; /* Maximum height for the shopping cart */
+    overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+}
+
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--orange);
+}
+
+.header .shopping-cart .box .content h3{
+    color: var(--black);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+
+
+
+}
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.header .shopping-cart .box {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    gap: 2rem;
+    position: relative;
+    margin: 1rem 0;
+    padding: 1rem 0; /* Add padding to create space around the content */
+    height: 10rem; /* Set a fixed height for each product box */
+    border-bottom: 1px solid #ccc; /* Add a border to separate product items */
+}
+
+.header .shopping-cart .box img {
+    height: 100%; /* Ensure the image takes up the full height of the box */
+    max-height: 100%; /* Ensure the image doesn't overflow the box */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.header .shopping-cart .box .content h3 {
+    color: var(--black);
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    flex-grow: 1; /* Allow the product name to take up remaining space */
+}
+
+.header .shopping-cart .total {
+    font-size: 1.6rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: var(--black);
+    padding: 1rem 0;
+    text-align: left;
+}
+
+
+.shopping-cart .box .price {
+    font-size: 1.6rem; /* Adjust the font size as needed */
+    color: var(--light-color);
+    padding: .5rem 0;
+}
+
+.shopping-cart .box .quantity {
+    font-size: 1.6rem; /* Adjust the font size as needed */
+    color: var(--light-color);
+}
+
+
+
+
+.header .login-form{
+    position: absolute;
+    top:110%; right:-110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    text-align: center;
+}
+.header .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+
+}
+
+.header .login-form .box{
+    width: 100%;
+    margin: .7rem 0;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+
+}
+
+.header .login-form p{
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+
+}
+
+.header .login-form p a{
+    color: var(--orange);
+    text-decoration: underline;
+
+
+}
+.home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../Image/Food.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-left: 29rem;
+    padding-top: 22rem;
+    padding-bottom: 10rem;
+}
+
+.home .content {
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3{
+    color: var(--black);
+    font-size: 3rem;
+}
+
+.home .content h3 span{
+
+    color: var(--orange);
+    
+}
+
+.features .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+
+
+}
+
+.features .box-container .box{
+    padding:3rem 2rem;
+    background: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+
+}
+.features .box-container .box:hover {
+    border: 0.2rem solid var(--black);
+    padding: 3.8rem 3.8rem; 
+}
+
+.features .box-container .box img{
+    margin:1rem 0;
+    height: 15rem;
+
+}
+
+.features .box-container .box h3{
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: var(--black);
+}
+
+.products .product-slider{
+    padding: 1rem;
+}
+
+.products .product-slider:first-child{
+    margin-bottom: 2rem;
+
+}
+.products .product-slider .box{
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.products .product-slider .box:hover{
+    border: 0.2rem solid var(--black);
+    padding: 3.8rem 3.8rem;
+
+}
+.products .product-slider .box img{
+    height: 20rem;
+}
+.products .product-slider .box h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.products .product-slider .box .price{
+    font-size: 2rem;
+    color: var(--light-color);
+    padding: .5rem 0;
+
+
+}
+
+
+.products .product-slider .box .stars i{
+    font-size: 1.7rem;
+    color: var(--orange);
+    padding: .5rem 0;
+
+
+}
+
+
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem ,1fr));
+    gap: 1.5rem;
+
+
+}
+
+.menu .box-container .box{
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    
+
+}
+.menu .box-container .box:hover{
+    border: 0.2rem solid var(--black);
+    padding: 3.8rem 3.8rem;
+}
+
+.menu .box-container .box img{
+    margin: 1rem 0;
+    height:15rem;
+}
+
+.menu .box-container .box h3{
+    font-size: 2rem;
+    color: var(--black);
+    line-height: 1.8;
+
+}
+
+.menu .box-container .box p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding:1rem 0;
+
+
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    z-index: 9999;
+    display: none; /* Initially hidden */
+    backdrop-filter: blur(9px); /* Add a blur effect */
+}
+
+#overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 4rem; /* Adjust the font size as needed */
+
+}
+
+
+
+
+/* Add a CSS class for blurring effect */
+.blur {
+    filter: blur(5px); /* Adjust the blur amount as needed */
+}
+
+
+
+
+
+
+/* Define keyframe animation */
+@keyframes buttonClickAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Apply animation on button click */
+.btn:active {
+    animation: buttonClickAnimation 0.3s ease-in-out;
+  }
+
+
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's above other elements */
+}
+
+.loading-overlay-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* White background */
+    opacity: 100%; /* Adjust opacity as needed */
+    z-index: -1; /* Ensure it's behind the loading logo */
+}
+
+.loading-logo {
+    z-index: 1; /* Ensure it's above the white background */
+}
+
+.loading-logo img {
+    width: 800px; /* Adjust width to make the image larger */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width: 768px) {
+    /* Adjust the background color and opacity of the loading overlay */
+    .loading-overlay-background {
+        background-color: white;
+    }
+
+    /* Adjust the size and position of the loading logo */
+    .loading-logo img {
+        width: 300px; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+@media (max-width: 768px) {
+    #overlay-content {
+        font-size: 3rem; /* Adjust the font size for smaller screens */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header .search-form.active {
+        right: 2rem; /* Adjust as needed */
+        width: 225px; /* Adjust as needed */
+    }
+}
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+      
+    }
+    .header{
+        padding: 2rem;
+    }
+    h{
+        padding: 2rem;
+    }
+
+}
+@media (max-width:768px){
+    
+     #menu-btn{
+    display: inline-block;
+    }
+
+  .home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../Image/Food.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-left: 15rem;
+    padding-top: 22rem;
+    padding-bottom: 10rem;
+}
+
+    
+
+    .header .navbar{
+        position: absolute;
+        top: 110%; right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+
+    }
+   
+    .header .navbar.active{
+        right: 2rem;
+        transition: .4s linear;    
+    }
+
+    
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+      
+    }
+
+    .heading{
+        font-size: 2.5rem;
+    }
+}

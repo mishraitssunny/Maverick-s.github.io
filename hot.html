@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Complete Responsive Grocery Website Design </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!---custom css file link--->
+    <link rel="stylesheet" href="css/pizza.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fa-solid fa-burger"></i>   Mavericks </a>
+    
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html#features">features</a>
+            <a href="index.html#products">products</a>
+            <a href="index.html#menu">nemu</a>
+            <a href="index.html#review">review</a>
+            <a href="index.html#blogs">blogs</a>
+    
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn" ></div>
+            <div class="fas fa-search" id="search-btn" ></div>
+            <div class="fas fa-shopping-cart" id="crt-btn" ></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here.....">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        
+    
+        <!-- Shooping Cart -->
+    
+        <div class="shopping-cart">
+            <div class="total">Total: ₹6656/-</div>
+            <a href="index.html" class="btn" id="checkout-btn">Order Now</a>
+        </div>
+    
+        <!-- Login Form -->
+        
+        <form action="" class="login-form" id="login-form">
+            <h3>Your Address</h3>
+            <input type="email" id="email" placeholder="Enter your email" class="box" required>
+            <input type="text" id="yourName" placeholder="Your Name" class="box" required>
+            <input type="tel" id="phone" placeholder="Phone Number" class="box" required maxlength="10" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            <input type="tel" id="housenumber" placeholder="House Number" class="box" required minlength="5" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            <input type="text" id="city" placeholder="City" class="box" required>
+            <input type="text" id="landmark" placeholder="Landmark" class="box" required>
+            <input type="tel" id="pincode" placeholder="Pin Code" class="box" required maxlength="6" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            
+            <input type="submit" value="Place Your Order" class="btn"onclick="submitToWeb3Forms(event)">
+        </form>
+        
+        
+    
+    
+    </header>
+    <!---header section edn-->
+
+
+    <!-- Product section start -->
+
+<section class="products" id="products">
+    <h1 class="heading">our <span>Hot Beverages</span></h1>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="Image/hc.jpg" alt="">
+                <h3>Hot Coffee</h3>
+                <span class="price">₹30/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/t.png" alt="">
+                <h3>Tea</h3>
+                <span class="price">₹20/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/mt.png" alt="">
+                <h3>Masala Tea</h3>
+                <span class="price">₹25/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/tt.png" alt="">
+                <h3>Tandoori Tea</h3>
+                <span class="price">30/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="Image/gt.png" alt="">
+                <h3>Green Tea</h3>
+                <span class="price">₹30/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+            </div>
+            <div class="swiper-slide box">
+                <img src="Image/bt.png" alt="">
+                <h3>Black Tea</h3>
+                <span class="price">₹30/-</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                </div>
+                <a href="#" class="btn">add to cart</a>
+
+         
+        </div>
+
+    </div>
+
+    
+
+</section>
+
+<!-- Product section end -->
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<!--custom js file link----->
+<script src="JS/script2.js"></script>
+
+
+    
+        
+</body>
+</html>
