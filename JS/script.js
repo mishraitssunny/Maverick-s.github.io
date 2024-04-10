@@ -198,7 +198,7 @@ window.addEventListener("load", function() {
     // Set a timeout to hide the loading overlay after 3 seconds
     setTimeout(function() {
         loadingOverlay.style.display = 'none'; // Hide the loading overlay
-    }, 3000); // 3000 milliseconds = 3 seconds
+    }, 1000); // 3000 milliseconds = 3 seconds
 });
 
 
